@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>show demo</title>
+        <meta id="mref" name="referrer" content="origin">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <meta name="description" content="">
+        <meta name="keyword" content="">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+        <script type="text/javascript" src="./jquery.show.js"></script>
+        <style>
+			body{margin:0 auto;text-align:center;}
+            .test{
+                width: 1300px;
+                height: 620px;
+                background-image: url(./new-blue.jpg);
+				margin: 0 auto;
+            }
+            .t1{left:200px;opacity:0;filter:alpha(opacity=0);}
+            .t2{left:500px;opacity:0;top:150px;filter:alpha(opacity=0);}
+			.title1{top:300px;opacity:0;color:#fff;filter:alpha(opacity=0);}
+			.title2{right:0;top:300px;opacity:0;color:#fff;filter:alpha(opacity=0);}
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var test = $(".test");
+				test.showIn();
+				function ss(){
+					$(".test").showOut();
+				}
+				var t=setTimeout(ss,5000)
+            });
+        </script>            
+    </head>
+    <body>
+        <div class="test">
+			<div class="title1" _left="100px"  _opacity=1 _speed=2000 item="show-3">
+				<h2>文艺小清新</h2>
+				<p>竟在豆瓣小站</p>
+			</div>
+            <img class="t1" src="./ipad.png" item="show-1" _opacity=1 next="show-2" _top="70px" _speed=2000/>
+            <img class="t2" src="./iphone.png" sub="show-2" _opacity=1 _top="240px" _speed=2000/>            
+			<div class="title2"  _right="100px"  _opacity=1 _speed=2000 item="show-4">
+				<h2>文艺小清新</h2>
+				<p>竟在豆瓣小站</p>
+			</div>
+
+        </div>
+    </body>
+</html>
+
